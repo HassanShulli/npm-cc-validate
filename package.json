@@ -2,9 +2,11 @@
   "name": "cc-validate",
   "version": "1.0.0",
   "description": "Credit Card validation using luhn algorithm",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+   "test": "mocha --reporter spec"
   },
   "keywords": [
     "credit",
@@ -14,5 +16,14 @@
     "algorithm"
   ],
   "author": "Hassan Shulli",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/pluralize": "0.0.29",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "pluralize": "^8.0.0"
+  }
 }
