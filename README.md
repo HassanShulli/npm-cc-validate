@@ -1,5 +1,5 @@
-# mypluralize
-A Node.js module that returns the plural form of any noun
+# cc-validate
+A typescript mod
 ## Installation 
 ```sh
 npm install mypluralize --save
