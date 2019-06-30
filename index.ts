@@ -1,4 +1,4 @@
-export function Validate(cardNumber: string) {
+export default function Validate(cardNumber: string) {
     let sum = 0;
     let toggle = false;
   
