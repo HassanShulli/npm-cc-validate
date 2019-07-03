@@ -1,6 +1,5 @@
-module CCValidate {
 
-  export function validate(cardNumber: string) {
+  let validate =  function (cardNumber: string) {
     let sum = 0;
     let toggle = false;
   
@@ -25,4 +24,5 @@ module CCValidate {
       return sum % 10 === 0;
     }
   }
-}
+
+  export { validate }
