@@ -1,32 +1,35 @@
 "use strict";
-var CCValidate;
-(function (CCValidate) {
-    function validate(cardNumber) {
-        var sum = 0;
-        var toggle = false;
-        for (var i = cardNumber.length - 1; i >= 0; i--) {
-            var currentNumber = parseInt(cardNumber.charAt(i), 10);
-            if (toggle === true) {
-                if (currentNumber * 2 > 9) {
-                    var digitOne = (currentNumber * 2) % 10;
-                    var digitTwo = Math.floor((currentNumber * 2) / 10);
-                    sum += digitOne + digitTwo;
-                }
-                else {
-                    sum += currentNumber * 2;
-                }
+/**
+* @Method: Returns is credit card is valid.
+* @Param {string}
+* @Return {boolean}
+*/
+Object.defineProperty(exports, "__esModule", { value: true });
+function isValid(cardNumber) {
+    var sum = 0;
+    var toggle = false;
+    for (var i = cardNumber.length - 1; i >= 0; i--) {
+        var currentNumber = parseInt(cardNumber.charAt(i), 10);
+        if (toggle === true) {
+            if (currentNumber * 2 > 9) {
+                var digitOne = (currentNumber * 2) % 10;
+                var digitTwo = Math.floor((currentNumber * 2) / 10);
+                sum += digitOne + digitTwo;
             }
             else {
-                sum += currentNumber;
+                sum += currentNumber * 2;
             }
-            toggle = !toggle;
-        }
-        if (cardNumber.length < 3) {
-            return false;
         }
         else {
-            return sum % 10 === 0;
+            sum += currentNumber;
         }
+        toggle = !toggle;
     }
-    CCValidate.validate = validate;
-})(CCValidate || (CCValidate = {}));
+    if (cardNumber.length < 3) {
+        return false;
+    }
+    else {
+        return sum % 10 === 0;
+    }
+}
+exports.isValid = isValid;

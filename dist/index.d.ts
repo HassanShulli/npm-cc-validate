@@ -1,3 +1,6 @@
-declare module CCValidate {
-    function validate(cardNumber: string): boolean;
-}
+/**
+* @Method: Returns is credit card is valid.
+* @Param {string}
+* @Return {boolean}
+*/
+export declare function isValid(cardNumber: string): boolean;

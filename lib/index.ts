@@ -1,6 +1,12 @@
 
-  let validate =  function (cardNumber: string) {
-    let sum = 0;
+/**
+* @Method: Returns is credit card is valid.
+* @Param {string}
+* @Return {boolean}
+*/
+
+export function isValid (cardNumber: string) : boolean {
+  	let sum = 0;
     let toggle = false;
   
     for (let i = cardNumber.length - 1; i >= 0; i--) {
@@ -24,5 +30,3 @@
       return sum % 10 === 0;
     }
   }
-
-  export { validate }
