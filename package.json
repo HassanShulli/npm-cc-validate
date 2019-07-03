@@ -1,6 +1,6 @@
 {
   "name": "cc-validate",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Credit Card validation using luhn algorithm",
   "main": "index.ts",
   "types": "dist/index.d.ts",
