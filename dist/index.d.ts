@@ -1,1 +1,3 @@
-export default function Validate(cardNumber: string): boolean;
+declare module CCValidate {
+    function validate(cardNumber: string): boolean;
+}
