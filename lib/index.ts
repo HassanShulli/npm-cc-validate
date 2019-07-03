@@ -1,6 +1,6 @@
 
 /**
-* @Method: Returns is credit card is valid.
+* @Method: Returns True if the credit card number is valid and false if it is not.
 * @Param {string}
 * @Return {boolean}
 */

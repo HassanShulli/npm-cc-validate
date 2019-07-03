@@ -2,32 +2,26 @@
 A typescript mod
 ## Installation 
 ```sh
-npm install mypluralize --save
-yarn add mypluralize
-bower install pluralize --save
+npm install cc-validate --save
+yarn add cc-validate
+bower install cc-validate --save
 ```
 ## Usage
 ### Javascript
 ```javascript
-var pluralise = require('mypluralize');
-var boys = pluralise.getPlural('Boy');
+var isValid = require('cc-validate');
+var valid = isValid('4111111111111111');
 ```
 ```sh
-Output should be 'Boys'
+Output should be true as '4111111111111111' is a valid credit card number
 ```
 ### TypeScript
 ```typescript
-import { getPlural } from 'mypluralize';
-console.log(getPlural('Goose'))
+import { isValid } from 'cc-validate';
+let valid = isValid('4111111111111111');
 ```
 ```sh
-Output should be 'Geese'
-```
-### AMD
-```javascript
-define(function(require,exports,module){
-  var pluralise = require('mypluralize');
-});
+Output should be true
 ```
 ## Test 
 ```sh
