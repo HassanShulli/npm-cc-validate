@@ -1,7 +1,10 @@
-# Credit Card Validation Package That Uses Luhn Algorithm
+# Credit Card Validation
 
-Credit Card Validation package cc-validate is used to validate your credit card number inputs. Just send it the number you wish to validate and you will get back a boolean, true if the number is valid and false if it is not.
-A detailed explanation of how this algorithm works can be found in this article :
+A credit card validation package that is based on luhn algorithm. Just pass the credit card number you wish to vaidate as a string and you will get back a boolean. True if the number is valid and false if it is invalid
+
+Luhn Algorithm is designed to protect against mistypes or reversed figures when typing credit card numbers.
+
+A detailed explanation of how the underlying algorithm works can be found in this article :
  https://link.medium.com/FZZwZ0YyXX
 
 A typical use case in a credit card form to notify the user if the credit card number is entered is invalid

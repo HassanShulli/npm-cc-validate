@@ -1,6 +1,6 @@
 {
   "name": "cc-validate",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Credit Card validation using luhn algorithm",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,14 +10,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com/HassanShulli/npm-cc-validate"
+    "url": "https://github.com/HassanShulli/npm-cc-validate"
   },
+  "homepage": "https://github.com/HassanShulli/npm-cc-validate",
   "keywords": [
     "credit",
+    "credit-card",
+    "credit card",
     "card",
+    "verify",
+    "validate",
     "validation",
     "luhn",
-    "algorithm"
+    "algorithm",
+    "luhn algorithm"
   ],
   "author": "Hassan Shulli",
   "license": "MIT",
@@ -28,6 +34,5 @@
     "typescript": "^3.5.2"
   },
   "dependencies": {
-    "pluralize": "^8.0.0"
   }
 }
