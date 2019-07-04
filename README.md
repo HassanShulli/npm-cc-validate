@@ -1,10 +1,18 @@
-# cc-validate
-A typescript mod
+# Credit Card Validation Package That Uses Luhn Algorithm
+
+Credit Card Validation package cc-validate is used to validate your credit card number inputs. Just send it the number you wish to validate and you will get back a boolean, true if the number is valid and false if it is not.
+A detailed explanation of how this algorithm works can be found in this article :
+ https://link.medium.com/FZZwZ0YyXX
+
+A typical use case in a credit card form to notify the user if the credit card number is entered is invalid
+
+## Download
+
+You can install `card-validator` through `npm`.
+
 ## Installation 
 ```sh
 npm install cc-validate --save
-yarn add cc-validate
-bower install cc-validate --save
 ```
 ## Usage
 ### Javascript
