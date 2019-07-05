@@ -17,8 +17,8 @@ npm install cc-validate --save
 ## Usage
 ### Javascript
 ```javascript
-var isValid = require('cc-validate');
-var valid = isValid('4111111111111111');
+var validate = require('cc-validate');
+var valid = validate.isValid('4111111111111111');
 ```
 ```sh
 Output should be true as '4111111111111111' is a valid credit card number
