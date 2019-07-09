@@ -1,8 +1,24 @@
 # Credit Card Validation
 
-A credit card validation package that is based on luhn algorithm. Just pass the credit card number you wish to vaidate as a string and you will get back a boolean. True if the number is valid and false if it is invalid
+A credit card validation package that is based on luhn algorithm with some small additions to cover the loopholes of this algorithm. 
 
-Luhn Algorithm is designed to protect against mistypes or reversed figures when typing credit card numbers.
+## Input
+
+Pass the credit card number as a string
+var result = isValid('4111111111111111');
+
+## Output
+
+An object
+
+```sh
+result = {
+    cardNumber : "4111 1111 1111 1111", // Formatted Credit Card String
+    cardType : 'Visa',		// Credit Card Type
+    isValid : true,		// Boolean True if card is valid, false if it is invalid
+    message : ''		// Helpful message to indicate why the Card is invalid
+}
+```
 
 A detailed explanation of how the underlying algorithm works can be found in this article :
  https://link.medium.com/FZZwZ0YyXX
@@ -21,15 +37,20 @@ npm install cc-validate --save
 ### Javascript
 ```javascript
 var isValid = require('cc-validate');
-var valid = isValid('4111111111111111');
+var result = isValid('4196221438170266');
 ```
 ```sh
-Output should be true as '4111111111111111' is a valid credit card number
+result = {
+    cardNumber : "4196 2214 3817 0266", // Formatted Credit Card String
+    cardType : 'Visa', // Credit Card Type
+    isValid : true, // Boolean True if card is valid, false if it is invalid
+    message : 'Credit Card number entered valid' // Helpful message to indicate why the Card is invalid
+}
 ```
 ### TypeScript
 ```typescript
 import { isValid } from 'cc-validate';
-let valid = isValid('4111111111111111');
+let valid = isValid('4196221438170266');
 ```
 ```sh
 Output should be true
