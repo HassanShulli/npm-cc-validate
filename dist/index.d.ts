@@ -3,4 +3,4 @@
 * @Param {string}
 * @Return {object}
 */
-export declare function isValid(cardNumber: string): object;
+export declare function isValid(input: string): object;

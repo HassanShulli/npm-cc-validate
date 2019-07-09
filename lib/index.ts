@@ -5,10 +5,9 @@
 * @Return {object}
 */
 
-export function isValid (cardNumber: string) : object {
+export function isValid (input: string) : object {
     // remove spacing
-    cardNumber = cardNumber.replace(/^\s+|\s+$|\s+(?=\s)/g, "");
-    
+    const cardNumber = input.replace(/\s/g,'');
     // initialize response object
     let result = {
         cardNumber : '',
@@ -101,7 +100,7 @@ export function isValid (cardNumber: string) : object {
         return result
     } else {
       result.isValid =  (sum % 10 === 0);
-      result.message = 'Credit Card number entered valid';
+      result.message = 'Credit Card number entered is valid';
       return result
     }
   }

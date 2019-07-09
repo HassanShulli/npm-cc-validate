@@ -3,7 +3,7 @@ var expect = require('chai').expect;
 var ccValid = require('../dist/index.js');
 describe('validate function test', () => {
     it('should return true visa card', () => {
-        var result = ccValid.isValid('4111111111111111');
+        var result = ccValid.isValid('4196 2214 3817 0266 ');
         expect(result.isValid).to.equal(true);
         expect(result.cardType).to.equal('Visa');
     });

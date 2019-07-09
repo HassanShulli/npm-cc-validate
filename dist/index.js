@@ -5,9 +5,9 @@
 * @Return {object}
 */
 Object.defineProperty(exports, "__esModule", { value: true });
-function isValid(cardNumber) {
+function isValid(input) {
     // remove spacing
-    cardNumber = cardNumber.replace(/^\s+|\s+$|\s+(?=\s)/g, "");
+    var cardNumber = input.replace(/\s/g, '');
     // initialize response object
     var result = {
         cardNumber: '',
@@ -102,7 +102,7 @@ function isValid(cardNumber) {
     }
     else {
         result.isValid = (sum % 10 === 0);
-        result.message = 'Credit Card number entered valid';
+        result.message = 'Credit Card number entered is valid';
         return result;
     }
 }
