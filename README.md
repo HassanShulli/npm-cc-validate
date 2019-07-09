@@ -13,10 +13,10 @@ An object
 
 ```sh
 result = {
-    cardNumber : "4111 1111 1111 1111", // Formatted Credit Card String
-    cardType : 'Visa',		// Credit Card Type
-    isValid : true,		// Boolean True if card is valid, false if it is invalid
-    message : ''		// Helpful message to indicate why the Card is invalid
+    cardNumber : "4111 1111 1111 1111",  // Formatted Credit Card String
+    cardType : 'Visa',  // Credit Card Type
+    isValid : true,  // Boolean True if card is valid, false if it is invalid
+    message : ''  // Helpful message to indicate why the Card is invalid
 }
 ```
 
@@ -36,20 +36,17 @@ npm install cc-validate --save
 ## Usage
 ### Javascript
 ```javascript
-<<<<<<< HEAD
+
 var isValid = require('cc-validate');
 var result = isValid('4196221438170266');
-=======
-var validate = require('cc-validate');
-var valid = validate.isValid('4111111111111111');
->>>>>>> 3a4a849d42abb4ee3e9c3d6cb0bd364208240e4c
+
 ```
 ```sh
 result = {
     cardNumber : "4196 2214 3817 0266", // Formatted Credit Card String
-    cardType : 'Visa', // Credit Card Type
-    isValid : true, // Boolean True if card is valid, false if it is invalid
-    message : 'Credit Card number entered valid' // Helpful message to indicate why the Card is invalid
+    cardType : 'Visa',  // Credit Card Type
+    isValid : true,  // Boolean True if card is valid, false if it is invalid
+    message : 'Credit Card number entered valid'  // Helpful message to indicate why the Card is invalid
 }
 ```
 ### TypeScript
@@ -58,7 +55,12 @@ import { isValid } from 'cc-validate';
 let valid = isValid('4196221438170266');
 ```
 ```sh
-Output should be true
+result = {
+    cardNumber : "4196 2214 3817 0266", // Formatted Credit Card String
+    cardType : 'Visa',		// Credit Card Type
+    isValid : true,			// Boolean True if card is valid, false if it is invalid
+    message : 'Credit Card number entered valid' // Helpful message to indicate why the Card is invalid
+}
 ```
 ## Test 
 ```sh
