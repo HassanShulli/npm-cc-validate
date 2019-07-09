@@ -36,8 +36,13 @@ npm install cc-validate --save
 ## Usage
 ### Javascript
 ```javascript
+<<<<<<< HEAD
 var isValid = require('cc-validate');
 var result = isValid('4196221438170266');
+=======
+var validate = require('cc-validate');
+var valid = validate.isValid('4111111111111111');
+>>>>>>> 3a4a849d42abb4ee3e9c3d6cb0bd364208240e4c
 ```
 ```sh
 result = {
