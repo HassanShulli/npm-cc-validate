@@ -37,8 +37,8 @@ npm install cc-validate --save
 ### Javascript
 ```javascript
 
-var isValid = require('cc-validate');
-var result = isValid('4196221438170266');
+var validate = require('cc-validate');
+var result = validate.isValid('4196221438170266');
 
 ```
 ```sh
@@ -52,7 +52,7 @@ result = {
 ### TypeScript
 ```typescript
 import { isValid } from 'cc-validate';
-let valid = isValid('4196221438170266');
+let result = isValid('4196221438170266');
 ```
 ```sh
 result = {
