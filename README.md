@@ -11,6 +11,11 @@ A credit card validation package that is based on luhn algorithm with some small
 - JCB
 - Diners Club
 
+## Demo
+
+https://cc-validate.firebaseapp.com/
+
+
 ## Input
 
 Pass the credit card number as a string
@@ -78,6 +83,9 @@ npm run test
 
 
 ## Major and Recent Changes
+
+V 2.0.5 : 
+Added live demo link
 
 V 2.0.4 : 
 Added validation for Diners Club
