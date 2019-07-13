@@ -26,7 +26,7 @@ export function isValid(cardNumber: string): object {
         const intCardNumber = parseInt(cardNumber);
         if (intCardNumber === 0) {
             result.isValid = false;
-            result.message = 'All zero input is not a valid credit card number';
+            result.message = 'An input of all zeroes is not a valid credit card number';
             return result
         }
     }
