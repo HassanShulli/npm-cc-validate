@@ -96,12 +96,12 @@ function isValid(cardNumber) {
     }
     if (length < 13 || length > 19) {
         result.isValid = false;
-        result.message = 'Credit Card number entered is not valid';
+        result.message = 'credit card number entered is not valid';
         return result;
     }
     else {
         result.isValid = (sum % 10 === 0);
-        result.message = 'Credit Card number entered valid';
+        result.message = 'credit card number entered is valid';
         return result;
     }
 }
