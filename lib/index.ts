@@ -5,8 +5,6 @@
  */
 
 export function isValid(cardNumber: string): object {
-    // remove spacing
-    cardNumber = cardNumber.replace(/^\s+|\s+$|\s+(?=\s)/g, "");
 
     // initialize response object
     let result = {
@@ -22,6 +20,8 @@ export function isValid(cardNumber: string): object {
         result.message = 'input is not of type string';
         return result
     } else {
+        // remove spacing
+        cardNumber = cardNumber.replace(/\s/g, "");
         // overcome loophole
         const intCardNumber = parseInt(cardNumber);
         if (intCardNumber === 0) {
@@ -71,20 +71,11 @@ export function isValid(cardNumber: string): object {
         if (length >= 16 && length <= 19) {
             result.cardType = 'Maestro';
         }
-    } else if (threeDigits === 300 || threeDigits === 301 ||
-        threeDigits === 302 || threeDigits === 303 ||
-        threeDigits === 304 || threeDigits === 305) {
-        if (length === 14) {
-            result.cardType = 'Diners Club - Carte Blanche'
-        }
-    } else if (twoDigits === 36) {
-        if (length === 14) {
-            result.cardType = 'Diners Club - International';
-        }
-    } else if (twoDigits === 54) {
-        if (length === 16) {
-            result.cardType = 'Diners Club - USA & Canada'
-        }
+    } else if ((sixDigits >= 300000 && sixDigits <= 305999) ||
+        (sixDigits >= 309500 && sixDigits <= 309599) ||
+        (sixDigits >= 360000 && sixDigits <= 369999) ||
+        (sixDigits >= 380000 && sixDigits <= 399999)) {
+        result.cardType = 'Diners Club';
     }
 
     for (let i = cardNumber.length - 1; i >= 0; i--) {
@@ -102,6 +93,7 @@ export function isValid(cardNumber: string): object {
         }
         toggle = !toggle;
     }
+
     if (length < 13 || length > 19) {
         result.isValid = false;
         result.message = 'Credit Card number entered is not valid';

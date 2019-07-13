@@ -2,6 +2,15 @@
 
 A credit card validation package that is based on luhn algorithm with some small additions to cover the loopholes of this algorithm. 
 
+## Supported credit card types
+
+- Visa
+- MasterCard
+- AMEX
+- Discover
+- JCB
+- Diners Club
+
 ## Input
 
 Pass the credit card number as a string
@@ -13,10 +22,10 @@ An object
 
 ```sh
 result = {
-    cardNumber : "4111 1111 1111 1111",  // Formatted Credit Card String
-    cardType : 'Visa',  // Credit Card Type
+    cardNumber : "4111 1111 1111 1111",  // Formatted credit card string
+    cardType : 'Visa',  // credit card Type
     isValid : true,  // Boolean True if card is valid, false if it is invalid
-    message : ''  // Helpful message to indicate why the Card is invalid
+    message : ''  // Success/Failure message
 }
 ```
 
@@ -46,7 +55,7 @@ result = {
     cardNumber : "4196 2214 3817 0266", // Formatted Credit Card String
     cardType : 'Visa',  // Credit Card Type
     isValid : true,  // Boolean True if card is valid, false if it is invalid
-    message : 'Credit Card number entered valid'  // Helpful message to indicate why the Card is invalid
+    message : 'Credit Card number entered valid'  // Success/Failure message
 }
 ```
 ### TypeScript
@@ -57,12 +66,24 @@ let result = isValid('4196221438170266');
 ```sh
 result = {
     cardNumber : "4196 2214 3817 0266", // Formatted Credit Card String
-    cardType : 'Visa',		// Credit Card Type
+    cardType : 'Visa',		        // Credit Card Type
     isValid : true,			// Boolean True if card is valid, false if it is invalid
-    message : 'Credit Card number entered valid' // Helpful message to indicate why the Card is invalid
+    message : 'Credit Card number entered valid' // Success/Failure message
 }
 ```
 ## Test 
 ```sh
 npm run test
 ```
+
+
+## Major and Recent Changes
+
+V 2.0.4 : 
+Added validation for Diners Club
+
+V 2.0.0 : 
+Addition of credit card type validation and card number formatting
+
+V 1.0.9
+First Stable Version

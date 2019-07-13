@@ -62,34 +62,14 @@ describe('validate function test', () => {
         expect(result.isValid).to.equal(false);
         expect(result.cardType).to.equal('Discover');
     });
-    it('should return true Diners Club - Carte Blanche', () => {
-        var result = ccValid.isValid('30544047328605');
-        expect(result.isValid).to.equal(true);
-        expect(result.cardType).to.equal('Diners Club - Carte Blanche');
-    });
-    it('should return false Diners Club - Carte Blanche', () => {
-        var result = ccValid.isValid('30544047328615');
-        expect(result.isValid).to.equal(false);
-        expect(result.cardType).to.equal('Diners Club - Carte Blanche');
-    });
-    it('should return true Diners Club - International', () => {
+    it('should return true Diners Club', () => {
         var result = ccValid.isValid('3820701658582478');
         expect(result.isValid).to.equal(true);
-        expect(result.cardType).to.equal('Diners Club - International');
+        expect(result.cardType).to.equal('Diners Club');
     });
-    it('should return false Diners Club - International', () => {
+    it('should return false Diners Club', () => {
         var result = ccValid.isValid('3820701658582479');
         expect(result.isValid).to.equal(false);
-        expect(result.cardType).to.equal('Diners Club - International');
-    });
-    it('should return true Diners Club - USA & Canada', () => {
-        var result = ccValid.isValid('5523926402142197');
-        expect(result.isValid).to.equal(true);
-        expect(result.cardType).to.equal('Diners Club - USA & Canada');
-    });
-    it('should return false Diners Club - USA & Canada', () => {
-        var result = ccValid.isValid('5523926412142197');
-        expect(result.isValid).to.equal(false);
-        expect(result.cardType).to.equal('Diners Club - USA & Canada');
+        expect(result.cardType).to.equal('Diners Club');
     });
 });
