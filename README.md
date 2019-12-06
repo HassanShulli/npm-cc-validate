@@ -41,7 +41,7 @@ A typical use case in a credit card form to notify the user if the credit card n
 
 ## Download
 
-You can install `card-validator` through `npm`.
+You can install `cc-validate` through `npm`.
 
 ## Installation 
 ```sh
