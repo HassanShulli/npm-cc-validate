@@ -112,6 +112,7 @@ npm test
 
 | Version | Changes |
 |---|---|
+| 2.0.6 | Code quality refactor, exported `ValidationResult` interface, fixed Discover card range detection |
 | 2.0.5 | Added live demo link |
 | 2.0.4 | Added Diners Club validation |
 | 2.0.0 | Card type detection and number formatting |
